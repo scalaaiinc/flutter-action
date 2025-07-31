@@ -17,7 +17,7 @@ jobs:
 
     steps:
       - name: Clone repository
-        uses: actions/checkout@v4
+        uses: scalaaiinc/checkout@main
       - name: Run shellcheck
         uses: ludeeus/action-shellcheck@master
 
@@ -43,7 +43,7 @@ jobs:
 
     steps:
       - name: Clone repository
-        uses: actions/checkout@v4
+        uses: scalaaiinc/checkout@main
       - id: flutter-action
         uses: ./
         with:
@@ -84,7 +84,7 @@ jobs:
 
     steps:
       - name: Clone repository
-        uses: actions/checkout@v4
+        uses: scalaaiinc/checkout@main
       - uses: ./
         with:
           channel: stable
@@ -104,7 +104,7 @@ jobs:
 
     steps:
       - name: Clone repository
-        uses: actions/checkout@v4
+        uses: scalaaiinc/checkout@main
       - uses: ./
         with:
           channel: stable
@@ -124,7 +124,7 @@ jobs:
 
     steps:
       - name: Clone repository
-        uses: actions/checkout@v4
+        uses: scalaaiinc/checkout@main
       - run: ./setup.sh -t -p -f test/pubspec.yaml   | grep '3.3.10'
         shell: bash
       - run: ./setup.sh -t -p                        | grep 'stable'
@@ -221,7 +221,7 @@ jobs:
 
     steps:
       - name: Clone repository
-        uses: actions/checkout@v4
+        uses: scalaaiinc/checkout@main
       - run: ./setup.sh -t -p -f test/pubspec.yaml   | grep '3.3.10'
         shell: bash
       - run: ./setup.sh -t -p                        | grep 'stable'
